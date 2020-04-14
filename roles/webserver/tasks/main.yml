@@ -13,3 +13,13 @@
     state: started
     enabled: yes
   tags: nginx
+
+- name: copy webpage files
+  copy:
+    src: html
+    dest: /usr/share/nginx/
+    owner: root
+    group: root
+    mode: 0644
+    directory_mode: 0755
+  tags: webpage
