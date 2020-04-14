@@ -2,9 +2,10 @@ all:
   vars:
     ansible_user: ec2-user
     ansible_become: yes
+    ansible_python_interpreter: auto_silent
   children:
     webservers:
       hosts:
-        ec2-35-175-174-246.compute-1.amazonaws.com
+        ec2-54-91-139-70.compute-1.amazonaws.com
     db:
       hosts:

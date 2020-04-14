@@ -1,0 +1,15 @@
+---
+# file: roles/webserver/tasks/main.yml
+
+- name: install nginx
+  yum:
+    name: nginx
+    state: present
+  tags: nginx
+
+- name: start nginx
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+  tags: nginx
