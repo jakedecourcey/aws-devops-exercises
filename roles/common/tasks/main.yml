@@ -1,0 +1,16 @@
+---
+# file: roles/common/tasks/main.yml
+
+- name: install ntp
+  yum:
+    name: ntp
+    state: present
+  notify: restart-ntpd
+  tags: ntp
+
+- name: enable ntp
+  service:
+    name: ntpd
+    state: started
+    enabled: yes
+  tags: ntp

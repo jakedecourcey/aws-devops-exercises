@@ -1,0 +1,10 @@
+all:
+  vars:
+    ansible_user: ec2-user
+    ansible_become: yes
+  children:
+    webservers:
+      hosts:
+        ec2-35-175-174-246.compute-1.amazonaws.com
+    db:
+      hosts:
