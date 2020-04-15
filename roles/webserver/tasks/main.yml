@@ -7,6 +7,12 @@
     state: present
   tags: nginx
 
+- name: install node
+  yum:
+    name: nodejs
+    state: present
+  tags: node
+
 - name: start nginx
   service:
     name: nginx
@@ -14,12 +20,18 @@
     enabled: yes
   tags: nginx
 
-- name: copy webpage files
-  copy:
-    src: html
+- name: download webpage files from git
+  git:
+    repo: "{{ repository }}"
     dest: /usr/share/nginx/
-    owner: root
-    group: root
-    mode: 0644
-    directory_mode: 0755
-  tags: webpage
+  tags: git
+      
+  #- name: copy webpage files
+  #copy:
+    #src: html
+    #dest: /usr/share/nginx/
+    ##owner: root
+    #group: root
+    #mode: 0644
+    #directory_mode: 0755
+    #tags: webpage
