@@ -6,6 +6,6 @@ all:
   children:
     webservers:
       hosts:
-        ec2-54-91-139-70.compute-1.amazonaws.com
+        ec2-54-82-60-168.compute-1.amazonaws.com
     db:
       hosts:
