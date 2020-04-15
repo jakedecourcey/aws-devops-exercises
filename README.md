@@ -1,4 +1,5 @@
 # AWS Exercises
+
 [Taken from this tutorial](https://www.reddit.com/r/sysadmin/comments/8inzn5/so_you_want_to_learn_aws_aka_how_do_i_learn_to_be/)
 
 ## Introduction
@@ -120,4 +121,4 @@ I've been recently recruiting for Cloud Systems Engineers and Cloud Systems Admi
 
 If you can't find an excuse or get support to do this as part of your job I would find a small but flashy/impressive personal project that you can build and show off as proof of your skills. Open source it on GitHub, make professional documentation, comment as much as is reasonable, and host a demo of the website. Add links to your LinkedIn, reference it on your resume, work it into interview answers, etc. When in a job interview you'll be able to answer all kinds of real-world questions because you've been-there-done-that with most of AWS' major services.
 
-I'm happy to hear any feedback. I'm considering making THIS post my flashy/impressive personal project in the form of a GitHub repo with sample code for each step, architecture diagrams, etc.                                                                                                               
+I'm happy to hear any feedback. I'm considering making THIS post my flashy/impressive personal project in the form of a GitHub repo with sample code for each step, architecture diagrams, etc.���������������������������������������������������������������������������������������������������������������
