@@ -2,7 +2,7 @@
 Ansible calls Packer calls Vagrant
 
 ## Test Env
-Deploy latest build to test url
+Ansible calls Packer calls Terraform to push to test url
 
 ## Prod Env
-Deploy latest build to prod url
+Ansible calls Packer calls Terraform to push to prod url
