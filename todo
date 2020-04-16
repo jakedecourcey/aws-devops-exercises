@@ -1,0 +1,8 @@
+## Dev Env
+Ansible calls Packer calls Vagrant
+
+## Test Env
+Deploy latest build to test url
+
+## Prod Env
+Deploy latest build to prod url
