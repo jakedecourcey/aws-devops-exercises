@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-AWS Exercises
-=======
 # AWS Exercises
 
 [Taken from this tutorial](https://www.reddit.com/r/sysadmin/comments/8inzn5/so_you_want_to_learn_aws_aka_how_do_i_learn_to_be/)
->>>>>>> fdb341ddd6232685598e5e9b01796960c503a723
 
-# AWS Exercises
 ## Introduction
 
 So many people struggle with where to get started with AWS and cloud technologies in general. There is popular "How do I learn to be a Linux admin?" post that inspired me to write an equivalent for cloud technologies. This post serves as a guide of goals to grow from basic AWS knowledge to understanding and deploying complex architectures in an automated way. Feel free to pick up where you feel relevant based on prior experience.
@@ -125,15 +120,3 @@ These didn't fit in nicely anywhere but are important AWS topics you should also
  - IAM: You should really learn how to create complex IAM Policies. You would have had to do basic roles+policies for for the EC2 Instance Role and Lambda  Execution Role, but there are many advanced features.
  - Networking: Create a new VPC from scratch with multiple subnets (you'll learn a LOT of networking concepts), once that is working create another VPC and peer them together. Get a VM in each subnet to talk to eachother using only their private IP addresses.
  - KMS: Go back and redo the early EC2 instance goals but enable encryption on the disk volumes. Learn how to encrypt an AMI.
-
-## Final Thoughts
-
-I've been recently recruiting for Cloud Systems Engineers and Cloud Systems Administrators. We've interviewed over a dozen local people with relevant resume experience. Every single person we interviewed would probably struggle starting with the DynamoDB/AutoScaling work. I'm finding there are very few people that HAVE ACTUALLY DONE THIS STUFF. Many people are familiar with the concepts, but when pushed for details they don't have answers or admit to just peripheral knowledge. You learn SO MUCH by doing.
-
-If you can't find an excuse or get support to do this as part of your job I would find a small but flashy/impressive personal project that you can build and show off as proof of your skills. Open source it on GitHub, make professional documentation, comment as much as is reasonable, and host a demo of the website. Add links to your LinkedIn, reference it on your resume, work it into interview answers, etc. When in a job interview you'll be able to answer all kinds of real-world questions because you've been-there-done-that with most of AWS' major services.
-
-<<<<<<< HEAD
-I'm happy to hear any feedback. I'm considering making THIS post my flashy/impressive personal project in the form of a GitHub repo with sample code for each step, architecture diagrams, etc.
-=======
-I'm happy to hear any feedback. I'm considering making THIS post my flashy/impressive personal project in the form of a GitHub repo with sample code for each step, architecture diagrams, etc.���������������������������������������������������������������������������������������������������������������
->>>>>>> fdb341ddd6232685598e5e9b01796960c503a723
