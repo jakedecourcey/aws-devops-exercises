@@ -16,3 +16,19 @@
     state: started
     enabled: yes
   tags: ntp
+
+- name: transfer github keys
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  loop:
+    - { src: 'git-config', dest: '/root/.gitconfig' }
+    - { src: 'git-credentials.j2', dest: '/root/.git-credentials' }
+  tags: git
+
+- name: download webpage files from git
+  git:
+    repo: "{{ repository }}"
+    dest: /usr/share/nginx/html/
+    force: yes
+  tags: git

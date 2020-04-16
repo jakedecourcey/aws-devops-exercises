@@ -19,19 +19,3 @@
     state: started
     enabled: yes
   tags: nginx
-
-- name: download webpage files from git
-  git:
-    repo: "{{ repository }}"
-    dest: /usr/share/nginx/
-  tags: git
-      
-  #- name: copy webpage files
-  #copy:
-    #src: html
-    #dest: /usr/share/nginx/
-    ##owner: root
-    #group: root
-    #mode: 0644
-    #directory_mode: 0755
-    #tags: webpage
