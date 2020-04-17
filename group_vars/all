@@ -3,7 +3,9 @@
 ansible_connection: ssh 
 ansible_python_interpreter: auto_silent
 ansible_become: yes
-repository: "https://github.com/jakedecourcey/rpg-treasure-tables.git"
+project_name: "rpg-treasure-tables"
+dev_directory: "~/{{ project_name }}/"
+repository: "https://github.com/jakedecourcey/{{ project_name }}.git"
 repository_username: jakedecourcey
 repository_key: !vault |
           $ANSIBLE_VAULT;1.1;AES256

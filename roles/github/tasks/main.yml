@@ -1,0 +1,29 @@
+---
+# file: roles/github/tasks/main.yml
+
+- name: ensure nginx directory is empty in preparation for copy
+  file:
+    state: "{{ item }}"
+    path: "/usr/share/nginx/html"
+    owner: 'root'
+    group: 'root'
+    mode: '0755'
+  with_items:
+    - absent
+    - directory
+
+- name: transfer github keys
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  loop:
+    - { src: 'git-config', dest: '/root/.gitconfig' }
+    - { src: 'git-credentials.j2', dest: '/root/.git-credentials' }
+  tags: git
+
+- name: install files from github repo
+  git:
+    repo: "{{ repository }}"
+    dest: /usr/share/nginx/html/
+    force: yes
+  tags: git

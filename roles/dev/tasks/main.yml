@@ -1,0 +1,9 @@
+---
+# roles/dev/tasks/main
+
+- name: copy local working directory to dev box
+  synchronize:
+    src: "{{ dev_directory }}"
+    dest: "/usr/share/nginx/html/"
+    delete: yes
+    recursive: yes

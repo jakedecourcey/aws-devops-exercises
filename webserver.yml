@@ -4,3 +4,7 @@
   roles:
     - common
     - webserver
+
+- hosts: dev
+  roles:
+    - dev
