@@ -9,7 +9,7 @@ Requirements:
 
 To spin up a dev environment, enter the `dev` directory and use `vagrant up`.
 
-This will call vagrant to create a virtual machine, which will then call ansible to provision it with the necessary packages and to download the github repo containing a webpage. Vagrant will then expose the webpage's port on (localhost:1234)[localhost:1234]
+This will call vagrant to create a virtual machine, which will then call ansible to provision it with the necessary packages and to download the github repo containing a webpage. Vagrant will then expose the webpage's port on [localhost:1234](localhost:1234)
 
 ## Roadmap
 ### Introduction
