@@ -1,21 +1,17 @@
 ---
 # file: roles/webserver/tasks/main.yml
 
-- name: install nginx
+- name: Instal nginx
   yum:
     name: nginx
     state: present
-  tags: nginx
+  tags:
+    - nginx
 
-- name: install node
-  yum:
-    name: nodejs
-    state: present
-  tags: node
-
-- name: start nginx
+- name: Ensure nginx is running
   service:
     name: nginx
     state: started
     enabled: yes
-  tags: nginx
+  tags:
+    - nginx

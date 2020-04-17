@@ -8,6 +8,7 @@
   tags:
     - ntp
     - git
+    - nginx
 
 - name: enable ntp
   service:
@@ -15,4 +16,3 @@
     state: started
     enabled: yes
   tags: ntp
-

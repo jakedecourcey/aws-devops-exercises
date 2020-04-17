@@ -4,7 +4,7 @@
 - name: ensure nginx directory is empty in preparation for copy
   file:
     state: "{{ item }}"
-    path: "/usr/share/nginx/html"
+    path: "/root/"
     owner: 'root'
     group: 'root'
     mode: '0755'
@@ -24,6 +24,6 @@
 - name: install files from github repo
   git:
     repo: "{{ repository }}"
-    dest: /usr/share/nginx/html/
+    dest: "/root/"
     force: yes
   tags: git

@@ -2,9 +2,9 @@
 # file: webserver.yml
 - hosts: webserver
   roles:
-    - common
     - webserver
 
 - hosts: dev
   roles:
     - dev
+

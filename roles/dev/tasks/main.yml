@@ -7,3 +7,4 @@
     dest: "/usr/share/nginx/html/"
     delete: yes
     recursive: yes
+
