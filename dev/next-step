@@ -1,2 +1,0 @@
-use vagrant to assign hostname to box
-add ansible dynamic inventory to look for hostnames
