@@ -1,8 +1,0 @@
-## Dev Env
-Ansible calls Packer calls Vagrant
-
-## Test Env
-Ansible calls Packer calls Terraform to push to test url
-
-## Prod Env
-Ansible calls Packer calls Terraform to push to prod url

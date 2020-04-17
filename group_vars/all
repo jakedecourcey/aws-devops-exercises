@@ -1,7 +1,6 @@
 ---
 # file: group_vars/all
 ansible_connection: ssh 
-ansible_ssh_user: ec2-user
 ansible_python_interpreter: auto_silent
 ansible_become: yes
 repository: "https://github.com/jakedecourcey/rpg-treasure-tables.git"
