@@ -1,7 +1,7 @@
 ---
 - name: install required packages
   yum:
-    name: python
+    name: "{{ db_packages }}"
     state: present
   tags:
-    - python
+    - mariadb
