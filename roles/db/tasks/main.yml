@@ -1,0 +1,7 @@
+---
+- name: install required packages
+  yum:
+    name: python
+    state: present
+  tags:
+    - python

@@ -1,5 +1,5 @@
 ---
-# roles/dev/tasks/main
+# file: roles/rsync/tasks/mail.yml
 
 - name: copy local working directory to dev box
   synchronize:
@@ -7,4 +7,3 @@
     dest: "/usr/share/nginx/html/"
     delete: yes
     recursive: yes
-

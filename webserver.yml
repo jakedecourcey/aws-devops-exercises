@@ -4,7 +4,7 @@
   roles:
     - webserver
 
-- hosts: dev
+- hosts: dev_webservers
   roles:
-    - dev
+    - rsync
 
