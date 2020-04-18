@@ -3,7 +3,7 @@
 ansible_connection: ssh 
 ansible_python_interpreter: auto_silent
 ansible_become: yes
-project_name: "rpg-treasure-tables"
+project_name: "rpg-utilities"
 dev_directory: "~/{{ project_name }}/"
 repository: "https://github.com/jakedecourcey/{{ project_name }}.git"
 repository_username: jakedecourcey
