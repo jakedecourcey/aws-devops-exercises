@@ -8,3 +8,6 @@
   roles:
     - rsync
 
+- hosts: webserver
+  roles:
+  - node

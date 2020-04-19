@@ -3,7 +3,7 @@
 
 - name: copy local working directory to dev box
   synchronize:
-    src: "{{ dev_directory }}"
-    dest: "/usr/share/nginx/html/"
+    src: "{{ local_directory }}"
+    dest: "{{ dev_directory }}"
     delete: yes
     recursive: yes
