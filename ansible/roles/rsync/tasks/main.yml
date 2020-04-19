@@ -7,3 +7,5 @@
     dest: "{{ dev_directory }}"
     delete: yes
     recursive: yes
+  tags:
+    - rsync
