@@ -7,11 +7,13 @@ Vagrant.configure("2") do |config|
         web.vm.box = "centos/7"
         web.vm.network "forwarded_port", guest: 3000, host: 1234, host_ip: "127.0.0.1"
         web.vm.define "webserver"
+        web.vm.network "private_network", ip: "192.168.50.4"
     end
 
     config.vm.define "db" do |db|
         db.vm.box = "centos/7"
         db.vm.define "dbserver"
+        db.vm.network "private_network", ip: "192.168.50.5"
     end
 
     config.vm.provision "ansible" do |ansible|
