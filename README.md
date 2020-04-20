@@ -67,7 +67,7 @@ Need an idea? Here: Fortune-of-the-Day - Display a random fortune each page load
   - [x] Checkpoint: You can view a simple HTML page served from both of your EC2 instances. You can turn one off and your website is still accessible.
 
 ### Automation Checkpoint #1
-  - [ ] Use Ansible + Vagrant to spin up local dev boxes
+  - [x] Use Ansible + Vagrant to spin up local dev boxes
   - [ ] Use Ansible and Packer to build AMIs and Terraform to deploy test and prod boxes
   - [ ] Some way to tear eveything down, too
   - [ ] Update README to explain the current status
