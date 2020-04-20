@@ -1,0 +1,13 @@
+---
+# file: webserver.yml
+- hosts: webserver
+  roles:
+    - webserver
+
+- hosts: dev_webservers
+  roles:
+    - rsync
+
+- hosts: webserver
+  roles:
+  - node
