@@ -4,6 +4,8 @@ ansible_connection: ssh
 ansible_python_interpreter: auto_silent
 ansible_become: yes
 project_name: "rpg-utilities"
+seed_db: "treasure"
+seed_collection: "treasure-types"
 local_directory: "~/{{ project_name }}/"
 dev_directory: "/home/vagrant/{{ project_name }}/"
 repository: "https://github.com/jakedecourcey/{{ project_name }}.git"

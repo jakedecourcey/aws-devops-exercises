@@ -3,3 +3,7 @@
 - hosts: dbserver
   roles:
     - db
+
+- hosts: dev_dbservers
+  roles:
+    - seed

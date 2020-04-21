@@ -1,0 +1,10 @@
+---
+# file: /ansible/roles/db_dev/tasks/main.yml
+
+- name: copy dev data file
+  copy:
+    src: "{{ local_directory }}/dev_data.json"
+    dest: "/home/vagrant/dev_data.json"
+
+- name: seed db with dev data
+  command: "mongoimport --file=/home/vagrant/dev_data.json --db={{ seed_db }} --collection={{ seed_collection }}"
