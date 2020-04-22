@@ -17,14 +17,8 @@
 
 - name: install required npm packages
   npm:
-    path: "{{ dev_directory }}"
+    path: "{{ server_directory }}"
     global: yes
   tags:
     - node
 
-- name: start node server
-  shell:
-    cmd: npm start &
-    chdir: "{{ dev_directory }}"
-  tags:
-    - node

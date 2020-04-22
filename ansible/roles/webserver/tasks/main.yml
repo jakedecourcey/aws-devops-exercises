@@ -16,3 +16,8 @@
   tags:
     - nginx
 
+- name: create project directory
+  file:
+    path: "{{ server_directory }}"
+    state: directory
+
