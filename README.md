@@ -12,7 +12,7 @@ To spin up a dev environment, set your project directory in `ansible/group_vars/
 
 This will call vagrant to create a virtual machine, which will then call ansible to provision it with the necessary packages and sync it to the local working directory specified in the global vars. Vagrant will then expose the webpage's port on [localhost:1234](localhost:1234).
 
-Upon changing files in the project directory, run `vagrant provision --provision-with rsync web` to only update the project files or setup a task runner to do the same (I'm using Grunt).
+Upon changing files in the project directory, run `vagrant provision --provision-with rsync` to only update the project files or setup a task runner to do the same (I'm using Grunt).
 
 This configuration allows you to write code in your comfortable primary environment, but test and evaluate in a production-equivalent environment.
 
