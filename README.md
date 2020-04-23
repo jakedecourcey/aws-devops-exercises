@@ -1,20 +1,38 @@
 # AWS Exercises
 
-[Adapted from this tutorial](https://www.reddit.com/r/sysadmin/comments/8inzn5/so_you_want_to_learn_aws_aka_how_do_i_learn_to_be/)
+[Adapted from this checklist](https://www.reddit.com/r/sysadmin/comments/8inzn5/so_you_want_to_learn_aws_aka_how_do_i_learn_to_be/)
 
 ## Current Status
 Requirements:
 - Vagrant
 - Ansible
+- Packer
+- Terraform
+- AWS CLI credentials & Github credentials already in your environment
+
+### First Steps
+Set the name of your project directory in Github in `ansible/group_vars/all`, `test/variables.tf`, & `prod/variables.tf`.
 
 ### Dev Environment
-To spin up a dev environment, set your project directory in `ansible/group_vars/all`, then enter the `dev` directory and use `vagrant up`.
+To spin up a dev environment, enter the `dev` directory and use `vagrant up`.
 
 This will call vagrant to create a virtual machine, which will then call ansible to provision it with the necessary packages and sync it to the local working directory specified in the global vars. Vagrant will then expose the webpage's port on [localhost:1234](localhost:1234).
 
 Upon changing files in the project directory, run `vagrant provision --provision-with rsync` to only update the project files or setup a task runner to do the same (I'm using Grunt).
 
 This configuration allows you to write code in your comfortable primary environment, but test and evaluate in a production-equivalent environment.
+
+### Test Environment
+To spin up a test environment, enter the `test` directory, run `packer build build-test-environment.json`, then run `terraform init`, then run `terraform apply`.
+
+This will call packer to create an AMI based on the ansible playbook in the default branch of your github repo and leave it in AWS. Terrform will then deploy the image to an instance and output the automatically generated IP address to access for testing.
+
+Don't forget to `terraform destroy` if you don't want to incur charges for the test environment. You may also want to delete the AMI and snapshot created, although they don't cost very much to host.
+
+### Prod Environment
+To spin up a test environment, enter the `prod` directory, run `packer build build-prod-environment.json`, then run `terraform init`, then run `terraform apply`.
+
+This will call packer to create an AMI based on the ansible playbook in the default branch of your github repo and leave it in AWS. Terrform will then deploy the image to an instance and associate a pre-existing elastic IP named `{{ project_name }}-prod`. It is up to you to have DNS setup to point your prod URL to that IP already.
 
 ## Roadmap
 ### Introduction

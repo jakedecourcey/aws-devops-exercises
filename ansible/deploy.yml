@@ -14,7 +14,7 @@
   roles:
     - rsync
 
-- hosts: test_webservers
+- hosts: test_webservers, prod_webservers
   roles:
     - github
 
@@ -26,7 +26,7 @@
   roles:
     - db
 
-- hosts: dev_dbservers, test_dbservers
+- hosts: dev_dbservers, test_dbservers, prod_webservers
   roles:
     - seed
 
@@ -34,6 +34,6 @@
   roles:
     - dev_start
 
-- hosts: test_webservers
+- hosts: test_webservers, prod_webservers
   roles:
     - start
