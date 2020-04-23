@@ -1,8 +1,14 @@
 {
+    "variables": {
+        "project_name": "rpg-utilities"
+    },
+
     "builders": [
         {
             "type": "amazon-ebs",
-            "ami_name": "rpg-utilities-test-image-{{timestamp}}",
+            "ami_name": "{{user `project_name`}}-test-image",
+            "force_deregister": "true",
+            "force_delete_snapshot": "true",
             "instance_type": "t2.nano",
             "region": "us-east-1",
             "source_ami_filter": {
@@ -16,6 +22,7 @@
             "ssh_username": "centos"
         }
     ],
+
     "provisioners": [
         {
             "type": "ansible",
