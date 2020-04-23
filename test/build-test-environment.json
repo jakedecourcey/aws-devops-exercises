@@ -2,7 +2,7 @@
     "builders": [
         {
             "type": "amazon-ebs",
-            "ami_name": "rpg-utilities-test-{{timestamp}}",
+            "ami_name": "rpg-utilities-test-image-{{timestamp}}",
             "instance_type": "t2.nano",
             "region": "us-east-1",
             "source_ami_filter": {
@@ -20,7 +20,7 @@
         {
             "type": "ansible",
             "playbook_file": "../ansible/deploy.yml",
-            "groups": ["webserver", "dbserver", "test_webserver"]
+            "groups": ["webservers", "dbservers", "test_webservers", "test_dbservers"]
         }
     ]
 }

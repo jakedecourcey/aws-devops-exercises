@@ -1,9 +1,17 @@
 ---
-# file: role/start/tasks/main.yml
+# file: roles/start/tasks/main.yml
 
-- name: start node server
+- name: install node process manager
+  npm:
+    name: pm2
+    state: present
+    global: yes
+  tags:
+    - start
+
+- name: start server as process and enable
   shell:
-    cmd: npm start >> /srv/web/rpg-utilities/log.txt &
+    cmd: pm2 start server.js && pm2 save && pm2 startup
     chdir: "{{ server_directory }}"
   tags:
-    - node
+    - start

@@ -5,12 +5,11 @@ Vagrant.configure("2") do |config|
 
     config.vm.define "dev" do |dev|
         dev.vm.box = "centos/7"
-        dev.vm.network "forwarded_port", guest: 3000, host: 1234, host_ip: "127.0.0.1"
+        dev.vm.network "forwarded_port", guest: 80, host: 1234, host_ip: "127.0.0.1"
     end
 
     config.vm.provision "ansible" do |ansible|
         ansible.playbook = "../ansible/deploy.yml"
-        #ansible.verbose = "vvv"
         ansible.groups = {
             "webservers" => ["dev"],
             "dbservers" => ["dev"],

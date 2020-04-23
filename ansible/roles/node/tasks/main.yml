@@ -15,10 +15,21 @@
   tags:
     - node
 
+- name: set permissions
+  file:
+    name: "{{ server_directory }}"
+    state: directory
+    recurse: yes
+    owner: root
+    group: root
+    mode: 0755
+  tags:
+    - node
+
 - name: install required npm packages
   npm:
     path: "{{ server_directory }}"
-    global: yes
+    state: present
   tags:
     - node
 

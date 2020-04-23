@@ -1,9 +1,18 @@
 provider "aws" {
-  profile    = "default"
-  region     = "us-east-1"
+    profile = "default"
+    region  = "us-east-1"
 }
 
-resource "aws_instance" "rpg-utilities" {
-  ami           = "ami-2757f631"
-  instance_type = "t2.nano"
+data "aws_ami" "rpg-utilities-test-image" {
+    most_recent = true
+    owners = ["self"]
+    filter {
+      name   = "name"
+      values = ["rpg-utilities-test-image-*"]
+    }
+}
+
+resource "aws_instance" "rpg-utilities-test" {
+    instance_type = "t2.nano"
+    ami           = "data.aws_ami.rpg-utilities-test-image.id"
 }

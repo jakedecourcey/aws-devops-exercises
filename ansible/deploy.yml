@@ -8,6 +8,7 @@
 - hosts: webservers
   roles:
     - webserver
+    - nginx
 
 - hosts: dev_webservers
   roles:
@@ -25,10 +26,14 @@
   roles:
     - db
 
-- hosts: dev_dbservers
+- hosts: dev_dbservers, test_dbservers
   roles:
     - seed
 
-- hosts: webservers
+- hosts: dev_webservers
+  roles:
+    - dev_start
+
+- hosts: test_webservers
   roles:
     - start
