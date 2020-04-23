@@ -1,6 +1,6 @@
-# AWS Exercises
+# AWS DevOps Exercises
 
-[Adapted from this checklist](https://www.reddit.com/r/sysadmin/comments/8inzn5/so_you_want_to_learn_aws_aka_how_do_i_learn_to_be/)
+[Adapted from this checklist - you can see my progress down below](https://www.reddit.com/r/sysadmin/comments/8inzn5/so_you_want_to_learn_aws_aka_how_do_i_learn_to_be/)
 
 ## Current Status
 Requirements:
