@@ -3,3 +3,6 @@ basic_packages:
   - epel-release
   - ntp
   - git
+  - libselinux-python
+  - libsemanage-python
+

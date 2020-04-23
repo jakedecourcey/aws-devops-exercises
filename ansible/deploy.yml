@@ -1,8 +1,39 @@
 ---
-# file: deploy.yml
+# file: webserver.yml
+
 - hosts: all
   roles:
     - common
 
-- import_playbook: webserver.yml
-- import_playbook: dbserver.yml
+- hosts: webservers
+  roles:
+    - webserver
+    - nginx
+
+- hosts: dev_webservers
+  roles:
+    - rsync
+
+- hosts: test_webservers, prod_webservers
+  roles:
+    - github
+
+- hosts: webservers
+  roles:
+    - node
+
+- hosts: dbservers
+  roles:
+    - db
+
+- hosts: dev_dbservers, test_dbservers, prod_webservers
+  roles:
+    - seed
+
+- hosts: dev_webservers
+  roles:
+    - dev_start
+
+- hosts: test_webservers, prod_webservers
+  roles:
+    - start
