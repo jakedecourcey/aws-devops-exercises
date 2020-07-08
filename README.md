@@ -86,9 +86,9 @@ Need an idea? Here: Fortune-of-the-Day - Display a random fortune each page load
 
 ### Automation Checkpoint #1
   - [x] Use Ansible + Vagrant to spin up local dev boxes
-  - [ ] Use Ansible and Packer to build AMIs and Terraform to deploy test and prod boxes
-  - [ ] Some way to tear eveything down, too
-  - [ ] Update README to explain the current status
+  - [x] Use Ansible and Packer to build AMIs and Terraform to deploy test and prod boxes
+  - [x] Some way to tear eveything down, too
+  - [x] Update README to explain the current status
 
 ### External Data
 
